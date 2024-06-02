@@ -12,4 +12,9 @@ jobs:
     
     steps:
       - id: test
-        run: echo ${{ toJSON(github.event.workflow_run) }}
+        run: |
+          json=$(cat <<EOF
+            ${{ toJSON(github.event.workflow_run) }}
+          EOF)
+          echo $json
+
