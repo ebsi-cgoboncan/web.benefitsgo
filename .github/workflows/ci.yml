@@ -4,6 +4,12 @@ on:
   pull_request:
     branches:
       - main
+    
 jobs:
   ci:
-    uses: ebsi-cgoboncan/platform.github/.github/workflows/ci.yml@main
+    runs-on: ubuntu-22.04
+    outputs:
+      package_version: ${{ steps.test.outputs.package_version }}
+    steps:
+      - id: test
+        uses: ebsi-cgoboncan/platform.github/.github/workflows/ci.yml@main
