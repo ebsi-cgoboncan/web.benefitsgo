@@ -7,9 +7,4 @@ on:
     
 jobs:
   ci:
-    runs-on: ubuntu-22.04
-    outputs:
-      package_version: ${{ steps.test.outputs.package_version }}
-    steps:
-      - id: test
-        uses: ebsi-cgoboncan/platform.github/.github/workflows/ci.yml@main
+    uses: ebsi-cgoboncan/platform.github/.github/workflows/ci.yml@main
