@@ -1,0 +1,9 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  ci:
+    uses: ebsi-cgoboncan/platform.github/.github/workflows/ci.yml@main
