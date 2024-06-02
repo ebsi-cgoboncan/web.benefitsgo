@@ -1,0 +1,15 @@
+name: cd
+
+on:
+  workflow_run:
+    workflows: [ci]
+    types:
+      - completed
+
+jobs:
+  cd:
+    runs-on: ubuntu-22.04    
+    
+    steps:
+      - id: test
+        run: echo ${{ github.event.workflow_run.outputs.package_version }}
