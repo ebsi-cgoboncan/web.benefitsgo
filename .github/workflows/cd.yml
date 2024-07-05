@@ -17,10 +17,6 @@ on:
           - ctdev
           - cttest
           - prod
-      deploy_version:
-        description: "The version that we want to deploy"
-        required: true
-        type: string
 
   workflow_run:
     workflows: ["ci"]
