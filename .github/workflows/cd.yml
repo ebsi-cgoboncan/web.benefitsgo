@@ -34,6 +34,6 @@ on:
 
 jobs:
   cd:
-    uses: ebsi-cgoboncan/platform.githb/.github/workflows/cd.yml
+    uses: ebsi-cgoboncan/platform.github/.github/workflows/cd.yml
     with:
       env: ${{ inputs.env }}
