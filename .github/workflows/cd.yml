@@ -20,6 +20,6 @@ on:
 
 jobs:
   cd:
-    uses: ebsi-cgoboncan/platform.github/.github/workflows/cd.yml
+    uses: ebsi-cgoboncan/platform.github/.github/workflows/cd.yml@main
     with:
       env: ${{ inputs.env }}
